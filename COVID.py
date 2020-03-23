@@ -96,7 +96,7 @@ sns.set(rc={'figure.figsize':(20, 10)})
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(10, 20), subplots=True)
+axes = diff_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(20, 10), subplots=True)
 for ax in axes:
     ax.set_ylabel('2nd derivative')
     ax.legend(fontsize = 'xx-large')
@@ -106,7 +106,7 @@ for ax in axes:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 20))
+axes = diff_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
 
 ax.set_ylabel('2nd derivative')
 ax.legend(fontsize = 'xx-large')
@@ -125,7 +125,7 @@ diff7_2
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(10, 20), subplots=True)
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(20, 10), subplots=True)
 for ax in axes:
     ax.set_ylabel('2nd derivative')
     ax.legend(fontsize = 'xx-large')
@@ -135,7 +135,7 @@ for ax in axes:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 20))
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
 
 ax.set_ylabel('2nd derivative')
 ax.legend(fontsize = 'xx-large')
@@ -146,7 +146,7 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/COVID_7_2.png'
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 20))
+axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
 
 ax.set_ylabel('2nd derivative')
 ax.legend(fontsize = 'xx-large')
@@ -157,7 +157,7 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/COVID_raw.png'
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 20))
+axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
 
 ax.set_ylabel('2nd derivative')
 ax.legend(fontsize = 'xx-large')
