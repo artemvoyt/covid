@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[617]:
+# In[758]:
 
 
 import pandas as pd
@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-# In[658]:
+# In[759]:
 
 
 def daterange(date1, date2):
@@ -18,34 +18,34 @@ def daterange(date1, date2):
         yield date1 + timedelta(n)
 
 
-# In[659]:
+# In[760]:
 
 
 url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv'
 df = pd.read_csv(url)
 
 
-# In[660]:
+# In[761]:
 
 
 df = df.drop(columns = ['Province/State', 'Lat', 'Long'])
 
 
-# In[661]:
+# In[762]:
 
 
 countries = ['Italy', 'France', 'Germany', 'US', 'China', 'Russia']
 df = df.loc[df['Country/Region'].isin(countries)]   
 
 
-# In[662]:
+# In[763]:
 
 
 start_dt = date(2020, 1, 22)
 end_dt = date.today()- timedelta(1)
 
 
-# In[663]:
+# In[764]:
 
 
 for dt in daterange(start_dt, end_dt):
@@ -56,7 +56,7 @@ df = df.drop_duplicates()
 df.columns = df.columns.str.replace(" sum", "")
 
 
-# In[689]:
+# In[765]:
 
 
 diff = []
@@ -70,7 +70,7 @@ diff = diff.drop(diff.index[0])
 diff
 
 
-# In[690]:
+# In[766]:
 
 
 diff_1 = diff.diff()
@@ -79,89 +79,65 @@ diff_2 = diff_1.diff()
 diff_2
 
 
-# In[719]:
-
-
-csv_name = "COVID_2nd_derivative.csv"
-diff_2.to_csv('/Users/mminakova/Documents/COVID/covid_tracker/covid/'+csv_name)
-
-
-# In[668]:
+# In[773]:
 
 
 sns.set(rc={'figure.figsize':(20, 10)})
 
 
-# In[692]:
-
-
-cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(20, 10), subplots=True)
-for ax in axes:
-    ax.set_ylabel('2nd derivative')
-    ax.legend(fontsize = 'xx-large')
-
-
-# In[693]:
-
-
-cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
-
-ax.set_ylabel('2nd derivative')
-ax.legend(fontsize = 'xx-large')
-
-
-# In[704]:
+# In[776]:
 
 
 diff7_1 = diff.diff(periods=7)
 diff7_1
 diff7_2 = diff7_1.diff(periods=7)
 diff7_2
+csv_name = "COVID_2nd_derivative.csv"
+diff7_2.to_csv('/Users/mminakova/Documents/COVID/'+csv_name)
 
 
-# In[705]:
+# In[777]:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(20, 10), subplots=True)
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(40, 40), linewidth = 1, subplots=True)
 for ax in axes:
-    ax.set_ylabel('2nd derivative')
+    ax.set_ylabel('Acc.& Dec. of 7 Day New Cases')
     ax.legend(fontsize = 'xx-large')
+    plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration & Deceleration of 7 Day New Cases separately.png')
 
 
-# In[711]:
+# In[778]:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5)
 
-ax.set_ylabel('2nd derivative')
-ax.legend(fontsize = 'xx-large')
-plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/COVID_7_2.png')
+axes.set_ylabel('Acceleration and Deceleration of 7 Day New Cases', fontsize = 20)
+axes.legend(fontsize = 'xx-large')
+plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration and Deceleration of 7 Day New Cases all.png')
 
 
-# In[712]:
+# In[779]:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
 
-ax.set_ylabel('2nd derivative')
-ax.legend(fontsize = 'xx-large')
-plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/COVID_raw.png')
+axes.set_ylabel('Total number of confirmed cases', fontsize = 20)
+axes.legend(fontsize = 'xx-large')
+plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number of confirmed cases.png')
 
 
-# In[717]:
+# In[780]:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
 
-ax.set_ylabel('2nd derivative')
-ax.legend(fontsize = 'xx-large')
-plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/COVID_7_1dev.png')
+axes.set_ylabel('7 Day New Cases', fontsize = 20)
+axes.legend(fontsize = 'xx-large')
+plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/7 Day New Cases.png')
 
 
 # In[ ]:
