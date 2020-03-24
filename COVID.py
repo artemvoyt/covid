@@ -82,7 +82,7 @@ diff_2
 # In[773]:
 
 
-sns.set(rc={'figure.figsize':(20, 10)})
+sns.set(rc={'figure.figsize':(10, 5)})
 
 
 # In[776]:
@@ -100,7 +100,7 @@ diff7_2.to_csv('/Users/mminakova/Documents/COVID/covid_tracker/covid/'+csv_name)
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(40, 40), linewidth = 1, subplots=True)
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(10, 5), linewidth = 1, subplots=True)
 for ax in axes:
     ax.set_ylabel('Acc.& Dec. of 7 Day New Cases')
     ax.legend(fontsize = 'xx-large')
@@ -111,7 +111,7 @@ for ax in axes:
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5)
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(10, 5), linewidth = 5)
 
 axes.set_ylabel('Acceleration and Deceleration of 7 Day New Cases', fontsize = 20)
 axes.legend(fontsize = 'xx-large')
@@ -122,7 +122,7 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration a
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
+axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 5))
 
 axes.set_ylabel('Total number of confirmed cases', fontsize = 20)
 axes.legend(fontsize = 'xx-large')
@@ -133,7 +133,7 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number o
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(20, 10))
+axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 5))
 
 axes.set_ylabel('7 Day New Cases', fontsize = 20)
 axes.legend(fontsize = 'xx-large')
