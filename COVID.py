@@ -100,7 +100,7 @@ diff7_2.to_csv('/Users/mminakova/Documents/COVID/covid_tracker/covid/'+csv_name)
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(10, 5), linewidth = 1, subplots=True)
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-',linewidth = 1, subplots=True)
 for ax in axes:
     ax.set_ylabel('Acc.& Dec. of 7 Day New Cases')
     ax.legend(fontsize = 'xx-large')
