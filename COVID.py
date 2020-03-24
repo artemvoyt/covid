@@ -93,7 +93,7 @@ diff7_1
 diff7_2 = diff7_1.diff(periods=7)
 diff7_2
 csv_name = "COVID_2nd_derivative.csv"
-diff7_2.to_csv('/Users/mminakova/Documents/COVID/'+csv_name)
+diff7_2.to_csv('/Users/mminakova/Documents/COVID/covid_tracker/covid/'+csv_name)
 
 
 # In[777]:
