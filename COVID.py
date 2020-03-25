@@ -123,9 +123,8 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration a
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 5))
-for ax in axes:
-    ax.set_ylabel('Total number of confirmed cases', fontsize = 15)
-    ax.legend(fontsize = 'medium')
+ax.set_ylabel('Total number of confirmed cases', fontsize = 15)
+ax.legend(fontsize = 'medium')
 plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number of confirmed cases.png')
 
 
