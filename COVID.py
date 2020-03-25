@@ -103,7 +103,7 @@ cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-',linewidth = 1, figsize=(20, 10), subplots=True)
 for ax in axes:
     ax.set_ylabel('Acc.& Dec. of 7 Day New Cases')
-    axes.legend(fontsize = 'small')
+    ax.legend(fontsize = 'small')
 plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration & Deceleration of 7 Day New Cases separately.png')
 
 
@@ -112,9 +112,9 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration &
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(10, 5), linewidth = 5)
-
-axes.set_ylabel('Acceleration and Deceleration of 7 Day New Cases', fontsize = 10)
-axes.legend(fontsize = 'medium')
+for ax in axes:
+    ax.set_ylabel('Acceleration and Deceleration of 7 Day New Cases', fontsize = 10)
+    ax.legend(fontsize = 'medium')
 plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration and Deceleration of 7 Day New Cases all.png')
 
 
@@ -123,9 +123,9 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration a
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 5))
-
-axes.set_ylabel('Total number of confirmed cases', fontsize = 15)
-axes.legend(fontsize = 'medium')
+for ax in axes:
+    ax.set_ylabel('Total number of confirmed cases', fontsize = 15)
+    ax.legend(fontsize = 'medium')
 plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number of confirmed cases.png')
 
 
@@ -134,9 +134,9 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number o
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
 axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 5, figsize=(10, 5))
-
-axes.set_ylabel('7 Day New Cases', fontsize = 15)
-axes.legend(fontsize = 'medium')
+for ax in axes:
+    ax.set_ylabel('7 Day New Cases', fontsize = 15)
+    ax.legend(fontsize = 'medium')
 plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/7 Day New Cases.png')
 
 
