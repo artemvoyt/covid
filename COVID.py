@@ -111,7 +111,7 @@ diff7_2.to_csv('/Users/mminakova/Documents/COVID/covid_tracker/covid/'+csv_name)
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(10, 5), linewidth = 1)
+axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', figsize=(10, 5), linewidth = 3)
 
 axes.set_ylabel('Acceleration and Deceleration of 7 Day New Cases', fontsize = 10)
 axes.legend(fontsize = 'medium')
