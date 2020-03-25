@@ -122,7 +122,7 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration a
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(10, 5))
+axes = diff[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 3, figsize=(10, 5))
 axes.set_ylabel('Total number of confirmed cases', fontsize = 15)
 axes.legend(fontsize = 'medium')
 plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number of confirmed cases.png')
@@ -132,7 +132,7 @@ plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Total number o
 
 
 cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 1, figsize=(10, 5))
+axes = diff7_1[cols_plot].plot(marker='.', alpha=0.5, linestyle='-', linewidth = 3, figsize=(10, 5))
 
 axes.set_ylabel('7 Day New Cases', fontsize = 15)
 axes.legend(fontsize = 'medium')
