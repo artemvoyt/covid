@@ -99,12 +99,12 @@ diff7_2.to_csv('/Users/mminakova/Documents/COVID/covid_tracker/covid/'+csv_name)
 # In[777]:
 
 
-cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
-axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-',linewidth = 1, figsize=(20, 10), subplots=True)
-for ax in axes:
-    ax.set_ylabel('Acc.& Dec. of 7 Day New Cases')
-    ax.legend(fontsize = 'small')
-plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration & Deceleration of 7 Day New Cases separately.png')
+# cols_plot = ['Germany', 'Italy', 'US', 'China', 'France', 'Russia']
+# axes = diff7_2[cols_plot].plot(marker='.', alpha=0.5, linestyle='-',linewidth = 1, figsize=(20, 10), subplots=True)
+# for ax in axes:
+#     ax.set_ylabel('Acc.& Dec. of 7 Day New Cases')
+#     ax.legend(fontsize = 'small')
+# plt.savefig('/Users/mminakova/Documents/COVID/covid_tracker/covid/Acceleration & Deceleration of 7 Day New Cases separately.png')
 
 
 # In[778]:
